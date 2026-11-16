@@ -1,0 +1,6 @@
+# Publish only the diagram page and its images (whitelist)
+/*
+!/.gitignore
+!/index.html
+!/resume_visuel.html
+!/img_bdd/
