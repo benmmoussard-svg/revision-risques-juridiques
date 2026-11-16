@@ -4,6 +4,8 @@ title: Risques juridiques numériques — résumé complet
 
 # Risques juridiques numériques — résumé complet (texte)
 
+Notes manuscrites (GoodNotes, risques 1 à 4) : [notes-manuscrites-risques-1-4.pdf](notes/notes-manuscrites-risques-1-4.pdf).
+
 Version texte de la page « Le cours en schémas » : tous les onglets sur une seule page, sans schéma. Sources : 3 PPT de S. Bricca-Druffin (P1 = 5 oct., P2 = 19 oct., P3 = 2 nov. 2026) et TD du 3 nov. Référence `P2·16` = PPT 2, diapo 16. « Hors slides » = vérifié ailleurs, pas dans le cours.
 
 ## 0. Les bases
