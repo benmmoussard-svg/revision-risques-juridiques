@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cas pratiques corrigés</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f6f7f9; --surface:#fff; --ink:#14213a; --muted:#5b6578; --line:#d9dee7;
+  --sw:#2f7d4f; --sw-soft:#e2f1e8; --pat:#b8641a; --pat-soft:#f8ebde; --db:#1f5fae; --db-soft:#e3ecf8;
+  --display:"Archivo",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1522; --surface:#172034; --ink:#e6ebf4; --muted:#9aa5b9; --line:#2a3550;
+  --sw:#6fc296; --sw-soft:#1b3328; --pat:#e9a35c; --pat-soft:#3a2a1a; --db:#7fb0ef; --db-soft:#1e2d4a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1522; --surface:#172034; --ink:#e6ebf4; --muted:#9aa5b9; --line:#2a3550;
+  --sw:#6fc296; --sw-soft:#1b3328; --pat:#e9a35c; --pat-soft:#3a2a1a; --db:#7fb0ef; --db-soft:#1e2d4a; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--body)}
+.wrap{max-width:860px;margin:0 auto;padding:20px 16px 40px;display:grid;gap:16px}
+a{color:var(--db)}
+h1{font:800 clamp(24px,5vw,34px)/1.1 var(--display);margin:0}
+h2{font:700 22px/1.2 var(--display);margin:0}
+h3{font:700 15px var(--mono);text-transform:uppercase;letter-spacing:.04em;margin:18px 0 6px;color:var(--muted)}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.dots{display:flex;gap:6px}
+.dots button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:600 13px var(--mono);cursor:pointer}
+.dots button[aria-current="true"]{background:var(--ink);color:var(--bg)}
+.slide{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:10px;padding:20px}
+.slide[hidden]{display:none}
+.tag{display:inline-block;font:600 12px var(--mono);padding:3px 8px;border-radius:4px;background:var(--cs);color:var(--c);margin-bottom:8px}
+.facts p{margin:6px 0}
+ol{padding-left:22px;margin:6px 0}
+li{margin:4px 0}
+.answer{margin-top:14px;padding-top:6px;border-top:1px dashed var(--line)}
+.answer[hidden]{display:none}
+.concl{background:var(--cs);border-radius:8px;padding:10px 14px;margin-top:14px;font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.btn{font:600 15px var(--body);padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn:disabled{opacity:.4;cursor:default}
+.ref{font:500 13px var(--mono);color:var(--muted)}
+.hint{font-size:13px;color:var(--muted);text-align:center;margin:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+  <h1>Cas pratiques corrigés</h1>
+  <a href="resume_visuel.html">← Cours en schémas</a>
+</div>
+<nav class="dots" aria-label="Cas"></nav>
+
+<!-- 1 -->
+<section class="slide" style="--c:var(--sw);--cs:var(--sw-soft)">
+  <span class="tag">Cas 1 · Risque 1 · PPT 1</span>
+  <h2>ALPHA c/ BETA : même fonctionnalités</h2>
+  <div class="facts">
+    <p>ALPHA développe un logiciel de gestion de stocks pour pharmacies. BETA développe ensuite un logiciel avec exactement les mêmes fonctionnalités (stocks, alertes de réapprovisionnement, statistiques, commandes).</p>
+    <p>ALPHA poursuit BETA en contrefaçon. BETA affirme n'avoir jamais copié le code source et avoir tout développé seule.</p>
+  </div>
+  <h3>Questions</h3>
+  <ol><li>Reprendre les mêmes fonctionnalités suffit-il à caractériser une contrefaçon ?</li><li>Quels éléments du logiciel sont protégés par le droit d'auteur ?</li><li>Quelle jurisprudence européenne mobiliser ?</li></ol>
+  <div class="answer" hidden>
+    <h3>Problème de droit</h3>
+    <p>Les fonctionnalités d'un logiciel sont-elles protégées par le droit d'auteur ?</p>
+    <h3>Correction</h3>
+    <ol>
+      <li><b>Non.</b> Les fonctionnalités sont des idées, et les idées sont de libre parcours. Un concurrent peut obtenir le même résultat avec son propre code.</li>
+      <li><b>Protégés</b> (L.112-2 13° CPI, directive 2009/24) : le code source, le code objet et le matériel de conception préparatoire, à condition d'être originaux (effort personnalisé, Ass. plén. 7 mars 1986, <i>Pachot</i>). <b>Non protégés</b> : fonctionnalités, algorithme, langage de programmation, format des fichiers, cahier des charges.</li>
+      <li><b>CJUE, 2 mai 2012, <i>SAS Institute c/ World Programming</i></b> (C-406/10) : ni les fonctionnalités, ni le langage, ni le format des fichiers ne sont protégés.</li>
+    </ol>
+    <p>ALPHA doit prouver une copie du code ou du matériel de conception (saisie-contrefaçon, expertise comparant les codes, L.332-4).</p>
+    <p class="concl">Pas de contrefaçon si BETA n'a pas copié le code. La simple identité de fonctionnalités ne suffit pas.</p>
+    <p class="ref">L.112-2 13° · L.335-3 · Pachot 1986 · SAS Institute 2012</p>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" style="--c:var(--sw);--cs:var(--sw-soft)" hidden>
+  <span class="tag">Cas 2 · Risque 2 · PPT 2</span>
+  <h2>Paul c/ SOFTPLUS : le logiciel du salarié</h2>
+  <div class="facts">
+    <p>Paul, développeur salarié de SOFTPLUS, développe seul, dans le cadre de son emploi, un logiciel innovant de gestion des contrats. Son contrat de travail ne dit rien sur les logiciels.</p>
+    <p>Après son départ, il crée sa société et commercialise le logiciel. SOFTPLUS revendique les droits. Paul dit qu'il est l'auteur et peut l'exploiter librement.</p>
+  </div>
+  <h3>Questions</h3>
+  <ol><li>Qui est titulaire des droits sur un logiciel créé par un salarié ?</li><li>Ce régime est-il particulier ?</li><li>Être l'auteur matériel permet-il à Paul d'exploiter librement le logiciel ?</li></ol>
+  <div class="answer" hidden>
+    <h3>Problème de droit</h3>
+    <p>Qui détient les droits patrimoniaux sur un logiciel créé par un salarié dans l'exercice de ses fonctions ?</p>
+    <h3>Correction</h3>
+    <ol>
+      <li><b>L'employeur.</b> L.113-9 CPI : les droits patrimoniaux sur un logiciel créé par un salarié <b>dans l'exercice de ses fonctions</b> ou <b>d'après les instructions</b> de l'employeur sont dévolus à l'employeur. Paul a développé le logiciel « dans le cadre de son emploi » → SOFTPLUS est titulaire.</li>
+      <li><b>Oui, c'est une exception.</b> En droit commun, le contrat de travail ne transfère aucun droit d'auteur (L.111-1 al. 3) : il faut une cession écrite. Pour le logiciel, la dévolution est <b>automatique</b>, sans clause, sauf stipulation contraire. L'absence de clause joue donc contre Paul. Ce régime ne vaut pas pour un prestataire indépendant.</li>
+      <li><b>Non.</b> Paul reste l'auteur et garde ses droits moraux, atténués (L.121-7) : paternité, et respect seulement en cas d'atteinte à son honneur. Il ne peut pas exercer les droits patrimoniaux. Partir de l'entreprise ne lui rend pas les droits. Commercialiser le logiciel = reproduction et distribution sans autorisation (L.122-6) → <b>contrefaçon</b> (L.335-3).</li>
+    </ol>
+    <p class="concl">SOFTPLUS est titulaire des droits patrimoniaux. Paul ne peut pas exploiter le logiciel et commet une contrefaçon.</p>
+    <p class="ref">L.113-9 · L.121-7 · L.122-6 · L.335-3</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" style="--c:var(--sw);--cs:var(--sw-soft)" hidden>
+  <span class="tag">Cas 3 · Risque 3 · PPT 2</span>
+  <h2>INFOGEST c/ DISTRIMAX : 10 postes, puis 45</h2>
+  <div class="facts">
+    <p>INFOGEST concède à DISTRIMAX une licence pour installer son logiciel de gestion de stocks sur 10 ordinateurs. Deux ans plus tard, DISTRIMAX l'installe sur 35 ordinateurs supplémentaires sans autorisation.</p>
+    <p>DISTRIMAX répond qu'elle a acheté légalement le logiciel et peut donc l'utiliser librement dans l'entreprise.</p>
+  </div>
+  <h3>Questions</h3>
+  <ol><li>Installer le logiciel sur 35 postes de plus peut-il porter atteinte aux droits du titulaire ?</li><li>Une licence acquise légalement permet-elle une utilisation illimitée ?</li><li>Quels droits du titulaire sont concernés ?</li></ol>
+  <div class="answer" hidden>
+    <h3>Problème de droit</h3>
+    <p>Le licencié qui dépasse le nombre d'installations prévu par la licence porte-t-il atteinte aux droits d'auteur ?</p>
+    <h3>Correction</h3>
+    <ol>
+      <li><b>Oui.</b> Installer un logiciel, c'est le reproduire (L.122-6 1° : reproduction permanente ou provisoire, y compris le chargement et l'exécution). Chaque installation non autorisée est une reproduction illicite : 35 contrefaçons (L.335-3).</li>
+      <li><b>Non.</b> DISTRIMAX n'a pas « acheté le logiciel » : elle a acquis une <b>licence</b>, c'est-à-dire un droit d'usage limité par le contrat. L'utilisateur légitime n'a que les droits de L.122-6-1 (utilisation conforme à sa destination, une copie de sauvegarde, étude, décompilation pour l'interopérabilité). L'épuisement du droit (CJUE 2012, <i>UsedSoft</i>) permet de revendre une copie, jamais d'en créer de nouvelles.</li>
+      <li><b>Le droit de reproduction</b> (L.122-6 1°), et le cas échéant le droit d'utilisation encadré par la licence. INFOGEST peut agir en contrefaçon : la CJUE admet que la violation d'une clause de licence de logiciel est une atteinte au droit d'auteur (CJUE 18 déc. 2019, <i>IT Development</i>).</li>
+    </ol>
+    <p class="concl">Contrefaçon pour les 35 postes. Sanctions : dommages-intérêts, et au pénal 3 ans + 300 000 €.</p>
+    <p class="ref">L.112-2 · L.122-6 · L.122-6-1 · L.335-2 / L.335-3 · IT Development 2019</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" style="--c:var(--pat);--cs:var(--pat-soft)" hidden>
+  <span class="tag">Cas 4 · Risque 4 · TD 3 nov.</span>
+  <h2>MEDTECH : « nouveau, donc brevetable » ?</h2>
+  <div class="facts">
+    <p>MEDTECH développe un logiciel qui améliore le fonctionnement d'un appareil médical et veut le protéger par un brevet.</p>
+    <p>Son conseil affirme : « Puisque le logiciel est nouveau, il peut automatiquement être breveté. » Qu'en pensez-vous ?</p>
+  </div>
+  <h3>Questions</h3>
+  <ol><li>Quelles sont les conditions de la brevetabilité ?</li><li>Un logiciel peut-il être breveté en tant que tel ?</li><li>Quels textes analyser ?</li></ol>
+  <div class="answer" hidden>
+    <h3>Problème de droit</h3>
+    <p>Un logiciel nouveau est-il automatiquement brevetable ?</p>
+    <h3>Correction</h3>
+    <ol>
+      <li><b>Trois conditions cumulatives</b> (L.611-10 CPI) : <b>nouveauté</b> absolue (L.611-11), <b>activité inventive</b> (non évidente pour l'homme du métier, L.611-14), <b>application industrielle</b> (L.611-15). La nouveauté ne suffit donc pas : le raisonnement du conseil est faux.</li>
+      <li><b>Non, pas « en tant que tel »</b> : L.611-10 al. 2 c) et 3, art. 52 CBE. Mais une invention mise en œuvre par ordinateur est brevetable si elle produit un <b>effet technique</b> (OEB, <i>IBM</i> 1998). Méthode <i>COMVIK</i> (2002) : caractère technique, puis activité inventive appréciée sur les seuls éléments techniques. Ici, le logiciel agit sur un appareil médical : l'effet technique est plausible. On brevète le <b>procédé</b> (logiciel + appareil), pas le code.</li>
+      <li>L.611-10, L.611-11, L.611-14, L.611-15 CPI ; art. 52 CBE ; jurisprudence OEB (IBM, COMVIK).</li>
+    </ol>
+    <p>Précautions : recherche d'antériorités (INPI, OEB) avant le dépôt, rédaction avec un conseil en propriété industrielle en visant l'effet technique. Le code reste de toute façon protégé par le droit d'auteur.</p>
+    <p class="concl">Le conseil a tort : pas de brevet automatique. Mais le brevet est possible si l'invention a un effet technique sur l'appareil et remplit les 3 conditions.</p>
+    <p class="ref">L.611-10 · art. 52 CBE · IBM 1998 · COMVIK 2002</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" style="--c:var(--db);--cs:var(--db-soft)" hidden>
+  <span class="tag">Cas 5 · Risque 5 · TD 3 nov.</span>
+  <h2>FUNCAR c/ THEGOODCORNER : copier des annonces</h2>
+  <div class="facts">
+    <p>FUNCAR (vente auto entre particuliers) récupère les annonces du site concurrent THEGOODCORNER pour construire sa propre base de données commerciale.</p>
+    <p>Son développeur affirme : « Toutes les informations sont librement accessibles en ligne, donc nous pouvons les copier. » Qu'en pensez-vous ?</p>
+  </div>
+  <h3>Questions</h3>
+  <ol><li>Quel est l'objet de la protection ?</li><li>Quel régime juridique s'applique ?</li><li>Quelle jurisprudence a inspiré ce cas ?</li></ol>
+  <div class="answer" hidden>
+    <h3>Problème de droit</h3>
+    <p>Peut-on extraire librement le contenu d'une base de données accessible au public en ligne ?</p>
+    <h3>Correction</h3>
+    <ol>
+      <li><b>Une base de données</b> (L.112-3) : éléments indépendants, rangés avec méthode, accessibles individuellement. Les annonces classées par catégories en sont une. On protège la base (structure et contenu rassemblé), pas chaque annonce isolée.</li>
+      <li><b>Double régime.</b> Structure : droit d'auteur si originale. Contenu : <b>droit sui generis du producteur</b> (L.341-1) s'il a fait un <b>investissement substantiel</b> pour obtenir, vérifier ou présenter les données (publicité, stockage, modération, catégories). Le producteur peut interdire l'<b>extraction</b> et la <b>réutilisation</b> d'une partie substantielle, en quantité ou en qualité (L.342-1), ainsi que les extractions répétées et systématiques de petites parties (L.342-2). Protection 15 ans. « Accessible en ligne » ≠ « libre de copie ».</li>
+      <li><b>Leboncoin c/ Entreparticuliers.com</b> (CA Paris 2 févr. 2021, Civ. 1re 5 oct. 2022) : la reprise des annonces immobilières de Leboncoin = extraction d'une partie qualitativement substantielle, illicite. À compléter par CJUE 2021 <i>CV-Online</i> : l'extraction doit menacer l'amortissement de l'investissement (ici, concurrent direct qui capte le trafic).</li>
+    </ol>
+    <p class="concl">Le développeur a tort : FUNCAR extrait illicitement la base de THEGOODCORNER. Sanctions : 3 ans + 300 000 € (L.343-4) et dommages-intérêts.</p>
+    <p class="ref">L.112-3 · L.341-1 · L.342-1 / L.342-2 · L.343-4 · Leboncoin 2022 · CV-Online 2021</p>
+  </div>
+</section>
+
+<div class="btns">
+  <button class="btn" id="prev">← Précédent</button>
+  <button class="btn primary" id="show">Voir la correction</button>
+  <button class="btn" id="next">Cas suivant →</button>
+</div>
+<p class="hint">Clavier : ← → pour changer de cas, Espace pour la correction. Méthode : faits → problème de droit → règle → application → conclusion.</p>
+</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')], dots=document.querySelector('.dots');
+const prev=document.getElementById('prev'), next=document.getElementById('next'), show=document.getElementById('show');
+let i=0;
+slides.forEach((_,k)=>{const b=document.createElement('button');b.textContent=k+1;b.setAttribute('aria-label','Cas '+(k+1));b.onclick=()=>go(k);dots.append(b)});
+function go(k){
+  i=Math.max(0,Math.min(slides.length-1,k));
+  slides.forEach((s,k2)=>s.hidden=k2!==i);
+  [...dots.children].forEach((b,k2)=>b.setAttribute('aria-current',k2===i));
+  prev.disabled=i===0; next.disabled=i===slides.length-1;
+  sync(); window.scrollTo({top:0});
+}
+function sync(){show.textContent=slides[i].querySelector('.answer').hidden?'Voir la correction':'Masquer la correction'}
+show.onclick=()=>{const a=slides[i].querySelector('.answer');a.hidden=!a.hidden;sync();if(!a.hidden)a.scrollIntoView({behavior:'smooth',block:'start'})};
+prev.onclick=()=>go(i-1); next.onclick=()=>go(i+1);
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(i+1);else if(e.key==='ArrowLeft')go(i-1);else if(e.key===' '){e.preventDefault();show.click()}});
+go(0);
+</script>
+</body>
+</html>
